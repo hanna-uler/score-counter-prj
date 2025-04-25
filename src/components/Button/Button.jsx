@@ -1,8 +1,8 @@
 import css from "./Button.module.css"
 
-export default function Button({btnText}) {
+export default function Button({btnType, btnText}) {
     return (
-        <button type="button" className={css.btn}>{btnText}</button>
+        <button type={btnType} className={css.btn}>{btnText}</button>
     )
     
 }
