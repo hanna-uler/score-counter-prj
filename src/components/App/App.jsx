@@ -4,16 +4,31 @@ import Header from "../Header/Header"
 import PlayersQuantityForm from "../PlayersQuantityForm/PlayersQuantityForm"
 import PlayersNamesForm from '../PlayersNamesForm/PlayersNamesForm';
 import Rules from "../Rules/Rules"
+// import LoginFormTraining from "../LoginFormTraining/LoginFormTraining"
+
 export default function App() {
   // const [isOpen, setIsOpen] = useState(false);
-  const handleClickPlay = (chosenBlock) => {
-    console.log(chosenBlock)
+  const handleClickPlay = (chosenBtn) => {
+    console.log(chosenBtn);
+    // if (chosenBtn === "Play!") {
+    //   return (
+    //     <>
+    //     <PlayersQuantityForm/>
+    //     </>
+    //   )
+    // } else {
+    //   return (
+    //     <>
+    //     <Rules/>
+    //     </>
+    //   )
+    // }
     return (
       <>
-        {chosenBlock === "play" && <p>play</p>}
-        {chosenBlock === "rules" && <p>rules</p>}
-        {chosenBlock === "play" && <PlayersQuantityForm />}
-        {chosenBlock === "rules" && <Rules/>}
+        {chosenBtn === "Play!" && <p>play</p>}
+        {chosenBtn === "Rules" && <p>rules</p>}
+        {chosenBtn === "play" && <PlayersQuantityForm />}
+        {chosenBtn === "rules" && <Rules/>}
       </>
     )
   }
@@ -31,7 +46,8 @@ export default function App() {
     <div className={css.container}>
       <Header onClick={handleClickPlay}/>
       <PlayersQuantityForm onQtySubmmit={handleQtySubmit} />
-      <PlayersNamesForm onNamesSubmit={handleNamesSubmit}/>
+      <PlayersNamesForm onNamesSubmit={handleNamesSubmit} />
+      {/* <LoginFormTraining/> */}
     </div>
     
   )
