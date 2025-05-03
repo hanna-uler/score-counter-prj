@@ -29,6 +29,9 @@ export default function RoundOneForm() {
         const player2scores = values.plr2rnd1Score + values.plr2rnd2Score + values.plr2rnd3Score + values.plr2rnd4Score;
         const player3scores = values.plr3rnd1Score + values.plr3rnd2Score + values.plr3rnd3Score + values.plr3rnd4Score;
         const player4scores = values.plr4rnd1Score + values.plr4rnd2Score + values.plr4rnd3Score + values.plr4rnd4Score;
+        console.log(player2scores);
+        console.log(player3scores);
+        console.log(player4scores);
 
         actions.formReset();
     }
