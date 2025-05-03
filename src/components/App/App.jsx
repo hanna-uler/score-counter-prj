@@ -4,9 +4,49 @@ import Header from "../Header/Header"
 import PlayersQuantityForm from "../PlayersQuantityForm/PlayersQuantityForm"
 import PlayersNamesForm from '../PlayersNamesForm/PlayersNamesForm';
 import Rules from "../Rules/Rules"
+import ScoreTable from "../ScoreTable/ScoreTable";
+import RoundOneForm from "../RoundOneForm/RoundOneForm";
 // import LoginFormTraining from "../LoginFormTraining/LoginFormTraining"
 
 export default function App() {
+  const players = [
+    {
+      id: "341",
+      name: "Mom",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "342",
+      name: "Dad",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "343",
+      name: "Nick",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "344",
+      name: "Alice",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+  ]
   // const [isOpen, setIsOpen] = useState(false);
   const handleClickPlay = (chosenBtn) => {
     console.log(chosenBtn);
@@ -47,7 +87,8 @@ export default function App() {
       <Header onClick={handleClickPlay}/>
       <PlayersQuantityForm onQtySubmmit={handleQtySubmit} />
       <PlayersNamesForm onNamesSubmit={handleNamesSubmit} />
-      {/* <LoginFormTraining/> */}
+      {/* <ScoreTable players={players}/> */}
+      <RoundOneForm/>
     </div>
     
   )
