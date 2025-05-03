@@ -30,7 +30,7 @@ export default function RoundOneForm() {
         const player3scores = values.plr3rnd1Score + values.plr3rnd2Score + values.plr3rnd3Score + values.plr3rnd4Score;
         const player4scores = values.plr4rnd1Score + values.plr4rnd2Score + values.plr4rnd3Score + values.plr4rnd4Score;
 
-
+        actions.formReset();
     }
     return (
         <Formik
