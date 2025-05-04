@@ -1,7 +1,7 @@
 import css from './ScoreTable.module.css'
 export default function ScoreTable({ players }) {
     return (
-                <table className={css.table}>
+        <table className={css.table}>
             <thead className={css.tableHead}>
                 <tr>
                     <th className={css.tableHeader}>Name</th>

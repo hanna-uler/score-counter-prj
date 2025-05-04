@@ -2,45 +2,54 @@ import { Formik, Form, Field } from "formik";
 import css from './RoundOneForm.module.css'
 // import { useId } from "react";
 
-export default function RoundOneForm() {
+export default function RoundOneForm({onSubmit}) {
     // const gameId = useId();
     const scoresObj = {
         plr1rnd1Score: 0,
         plr2rnd1Score: 0,
         plr3rnd1Score: 0,
         plr4rnd1Score: 0,
+        plr5rnd1Score: 0,
         plr1rnd2Score: 0,
         plr2rnd2Score: 0,
         plr3rnd2Score: 0,
         plr4rnd2Score: 0,
+        plr5rnd2Score: 0,
         plr1rnd3Score: 0,
         plr2rnd3Score: 0,
         plr3rnd3Score: 0,
         plr4rnd3Score: 0,
+        plr5rnd3Score: 0,
         plr1rnd4Score: 0,
         plr2rnd4Score: 0,
         plr3rnd4Score: 0,
         plr4rnd4Score: 0,
+        plr5rnd4Score: 0,
     }
     const handleScoresSubmit = (values, actions) => {
         console.log(values);
         const player1scores = values.plr1rnd1Score + values.plr1rnd2Score + values.plr1rnd3Score + values.plr1rnd4Score;
-        console.log(player1scores);
+        console.log("Player 1 Score:", player1scores);
         const player2scores = values.plr2rnd1Score + values.plr2rnd2Score + values.plr2rnd3Score + values.plr2rnd4Score;
         const player3scores = values.plr3rnd1Score + values.plr3rnd2Score + values.plr3rnd3Score + values.plr3rnd4Score;
         const player4scores = values.plr4rnd1Score + values.plr4rnd2Score + values.plr4rnd3Score + values.plr4rnd4Score;
-        console.log(player2scores);
-        console.log(player3scores);
-        console.log(player4scores);
+        const player5scores = values.plr5rnd1Score + values.plr5rnd2Score + values.plr5rnd3Score + values.plr5rnd4Score;
 
-        actions.formReset();
+        console.log("Player 2 Score:", player2scores);
+        console.log("Player 3 Score:", player3scores);
+        console.log("Player 4 Score:", player4scores);
+        console.log("Player 5 Score:", player5scores);
+        onSubmit(player1scores, player2scores, player3scores, player4scores, player5scores);
+
+        actions.resetForm();
+
     }
     return (
         <Formik
             initialValues={scoresObj}
             onSubmit={handleScoresSubmit}
         >
-            <Form>
+            <Form className={css.form}>
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Round One Scores</legend>
                     <label className={css.label} htmlFor='plr1rnd1Score'>
@@ -78,6 +87,15 @@ export default function RoundOneForm() {
                         name='plr4rnd1Score'
                         className={css.input}
                         id="plr4rnd1Score"
+                    />
+                    <label className={css.label} htmlFor="plr5rnd1Score">
+                        Player 5 Score
+                    </label>
+                    <Field
+                        type='number'
+                        name='plr5rnd1Score'
+                        className={css.input}
+                        id="plr5rnd1Score"
                     />
                 </fieldset>
                 <fieldset className={css.fieldset}>
@@ -118,6 +136,15 @@ export default function RoundOneForm() {
                         className={css.input}
                         id="plr4rnd2Score"
                     />
+                    <label className={css.label} htmlFor="plr5rnd2Score">
+                        Player 5 Score
+                    </label>
+                    <Field
+                        type='number'
+                        name='plr5rnd2Score'
+                        className={css.input}
+                        id="plr5rnd2Score"
+                    />
                 </fieldset>
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Round Three Scores</legend>
@@ -156,6 +183,15 @@ export default function RoundOneForm() {
                         name='plr4rnd3Score'
                         className={css.input}
                         id="plr4rnd3Score"
+                    />
+                    <label className={css.label} htmlFor="plr5rnd3Score">
+                        Player 5 Score
+                    </label>
+                    <Field
+                        type='number'
+                        name='plr5rnd3Score'
+                        className={css.input}
+                        id="plr5rnd3Score"
                     />
                 </fieldset>
                 <fieldset className={css.fieldset}>
@@ -196,8 +232,17 @@ export default function RoundOneForm() {
                         className={css.input}
                         id="plr4rnd4Score"
                     />
+                    <label className={css.label} htmlFor="plr5rnd4Score">
+                        Player 5 Score
+                    </label>
+                    <Field
+                        type='number'
+                        name='plr5rnd4Score'
+                        className={css.input}
+                        id="plr5rnd4Score"
+                    />
                 </fieldset>
-                <button type="submit">Count!</button>
+                <button className={css.button} type="submit">Count!</button>
             </Form>
         </Formik>
     )
