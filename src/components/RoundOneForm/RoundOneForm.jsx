@@ -2,7 +2,7 @@ import { Formik, Form, Field } from "formik";
 import css from './RoundOneForm.module.css'
 // import { useId } from "react";
 
-export default function RoundOneForm({onSubmit}) {
+export default function RoundOneForm({player1,player2,player3,player4,player5, onSubmit}) {
     // const gameId = useId();
     const scoresObj = {
         plr1rnd1Score: 0,
@@ -30,6 +30,7 @@ export default function RoundOneForm({onSubmit}) {
         console.log(values);
         const player1scores = values.plr1rnd1Score + values.plr1rnd2Score + values.plr1rnd3Score + values.plr1rnd4Score;
         console.log("Player 1 Score:", player1scores);
+        console.log("players[0]/player1: ", player1)
         const player2scores = values.plr2rnd1Score + values.plr2rnd2Score + values.plr2rnd3Score + values.plr2rnd4Score;
         const player3scores = values.plr3rnd1Score + values.plr3rnd2Score + values.plr3rnd3Score + values.plr3rnd4Score;
         const player4scores = values.plr4rnd1Score + values.plr4rnd2Score + values.plr4rnd3Score + values.plr4rnd4Score;
@@ -53,7 +54,7 @@ export default function RoundOneForm({onSubmit}) {
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Round One Scores</legend>
                     <label className={css.label} htmlFor='plr1rnd1Score'>
-                        Player 1 Score
+                        {player1.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -62,7 +63,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr1rnd1Score"
                     />
                     <label className={css.label} htmlFor="plr2rnd1Score">
-                        Player 2 Score
+                        {player2.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -71,7 +72,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr2rnd1Score"
                     />
                     <label className={css.label} htmlFor="plr3rnd1Score">
-                        Player 3 Score
+                        {player3.name}'s Score
                     </label>
                     <Field
                         type='number' 
@@ -80,7 +81,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr3rnd1Score"
                     />
                     <label className={css.label} htmlFor="plr4rnd1Score">
-                        Player 4 Score
+                        {player4.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -89,7 +90,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr4rnd1Score"
                     />
                     <label className={css.label} htmlFor="plr5rnd1Score">
-                        Player 5 Score
+                        {player5.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -101,7 +102,7 @@ export default function RoundOneForm({onSubmit}) {
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Round Two Scores</legend>
                     <label className={css.label} htmlFor='plr1rnd2Score'>
-                        Player 1 Score
+                        {player1.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -110,7 +111,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr1rnd2Score"
                     />
                     <label className={css.label} htmlFor="plr2rnd2Score">
-                        Player 2 Score
+                        {player2.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -119,7 +120,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr2rnd2Score"
                     />
                     <label className={css.label} htmlFor="plr3rnd2Score">
-                        Player 3 Score
+                        {player3.name}'s Score
                     </label>
                     <Field
                         type='number' 
@@ -128,7 +129,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr3rnd2Score"
                     />
                     <label className={css.label} htmlFor="plr4rnd2Score">
-                        Player 4 Score
+                        {player4.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -137,7 +138,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr4rnd2Score"
                     />
                     <label className={css.label} htmlFor="plr5rnd2Score">
-                        Player 5 Score
+                        {player5.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -149,7 +150,7 @@ export default function RoundOneForm({onSubmit}) {
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Round Three Scores</legend>
                     <label className={css.label} htmlFor='plr1rnd3Score'>
-                        Player 1 Score
+                        {player1.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -158,7 +159,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr1rnd3Score"
                     />
                     <label className={css.label} htmlFor="plr2rnd3Score">
-                        Player 2 Score
+                        {player2.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -167,7 +168,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr2rnd3Score"
                     />
                     <label className={css.label} htmlFor="plr3rnd3Score">
-                        Player 3 Score
+                        {player3.name}'s Score
                     </label>
                     <Field
                         type='number' 
@@ -176,7 +177,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr3rnd3Score"
                     />
                     <label className={css.label} htmlFor="plr4rnd3Score">
-                        Player 4 Score
+                        {player4.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -185,7 +186,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr4rnd3Score"
                     />
                     <label className={css.label} htmlFor="plr5rnd3Score">
-                        Player 5 Score
+                        {player5.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -197,7 +198,7 @@ export default function RoundOneForm({onSubmit}) {
                 <fieldset className={css.fieldset}>
                     <legend className={css.legend}>Pudding Scores</legend>
                     <label className={css.label} htmlFor='plr1rnd4Score'>
-                        Player 1 Score
+                        {player1.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -206,7 +207,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr1rnd4Score"
                     />
                     <label className={css.label} htmlFor="plr2rnd4Score">
-                        Player 2 Score
+                        {player2.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -215,7 +216,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr2rnd4Score"
                     />
                     <label className={css.label} htmlFor="plr3rnd4Score">
-                        Player 3 Score
+                        {player3.name}'s Score
                     </label>
                     <Field
                         type='number' 
@@ -224,7 +225,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr3rnd4Score"
                     />
                     <label className={css.label} htmlFor="plr4rnd4Score">
-                        Player 4 Score
+                        {player4.name}'s Score
                     </label>
                     <Field
                         type='number'
@@ -233,7 +234,7 @@ export default function RoundOneForm({onSubmit}) {
                         id="plr4rnd4Score"
                     />
                     <label className={css.label} htmlFor="plr5rnd4Score">
-                        Player 5 Score
+                        {player5.name}'s Score
                     </label>
                     <Field
                         type='number'

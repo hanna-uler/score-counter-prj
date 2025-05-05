@@ -50,7 +50,7 @@ export default function App() {
     },
         {
       id: "344",
-      name: "Someone Else",
+      name: "Guest",
       roundOne: 0,
       roundTwo: 0,
       roundThree: 0,
@@ -117,7 +117,7 @@ export default function App() {
       <PlayersQuantityForm onQtySubmmit={handleQtySubmit} />
       <PlayersNamesForm onNamesSubmit={handleNamesSubmit} />
       {/* <ScoreTable players={players}/> */}
-      <RoundOneForm onSubmit={handleGameSummary} />
+      <RoundOneForm player1={players[0]} player2={players[1]} player3={players[2]} player4={players[3]} player5={players[4]} onSubmit={handleGameSummary} />
       <Winner player1={players[0]} player2={players[1]} player3={players[2]} player4={players[3]} player5={players[4]} />
     </div>
     
