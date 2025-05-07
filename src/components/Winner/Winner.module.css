@@ -1,3 +1,21 @@
 .scoreList {
   list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 2px dashed #ffa500;
+  border-radius: 10px;
+  padding: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.player {
+  color: #333;
 }
