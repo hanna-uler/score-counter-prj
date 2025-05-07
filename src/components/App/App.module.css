@@ -14,7 +14,6 @@
   align-items: center;
   padding: 16px 8px;
   background: linear-gradient(to bottom, #fffef7, #ffe5ec);
-  font-family: "Quicksand", sans-serif;
 }
 @media (min-width: 480px) {
   .container {

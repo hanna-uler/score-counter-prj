@@ -11,15 +11,13 @@
 .title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ff7f50; /* A softer coral/orange for contrast */
+  color: #ff7f50;
   margin-bottom: 8px;
-  font-family: "Quicksand", sans-serif;
 }
 .subtitle {
   font-size: 1rem;
   color: #555;
   font-weight: 500;
-  font-family: "Quicksand", sans-serif;
 }
 .question {
   font-size: 1rem;
