@@ -66,7 +66,7 @@ export default function App() {
       player4.name = player4name;
       player5.name = player5name;
     })
-    // console.log(players);
+    console.log(players);
   }
   const [scores, setScores] = useState({
     mom: 0,

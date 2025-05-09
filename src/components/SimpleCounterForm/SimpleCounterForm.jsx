@@ -1,29 +1,34 @@
 import { Formik, Form, Field } from "formik";
 import css from './SimpleCounterForm.module.css'
 
-export default function SimpleCounterForm ({onSubmit}) {
-    const scoresObj = {
-        plr1rnd1Score: 0,
-        plr2rnd1Score: 0,
-        plr3rnd1Score: 0,
-        plr4rnd1Score: 0,
-        plr5rnd1Score: 0,
-        plr1rnd2Score: 0,
-        plr2rnd2Score: 0,
-        plr3rnd2Score: 0,
-        plr4rnd2Score: 0,
-        plr5rnd2Score: 0,
-        plr1rnd3Score: 0,
-        plr2rnd3Score: 0,
-        plr3rnd3Score: 0,
-        plr4rnd3Score: 0,
-        plr5rnd3Score: 0,
-        plr1rnd4Score: 0,
-        plr2rnd4Score: 0,
-        plr3rnd4Score: 0,
-        plr4rnd4Score: 0,
-        plr5rnd4Score: 0,
-    }
+const scoresObj = {
+    plr1rnd1Score: 0,
+    plr2rnd1Score: 0,
+    plr3rnd1Score: 0,
+    plr4rnd1Score: 0,
+    plr5rnd1Score: 0,
+    plr1rnd2Score: 0,
+    plr2rnd2Score: 0,
+    plr3rnd2Score: 0,
+    plr4rnd2Score: 0,
+    plr5rnd2Score: 0,
+    plr1rnd3Score: 0,
+    plr2rnd3Score: 0,
+    plr3rnd3Score: 0,
+    plr4rnd3Score: 0,
+    plr5rnd3Score: 0,
+    plr1rnd4Score: 0,
+    plr2rnd4Score: 0,
+    plr3rnd4Score: 0,
+    plr4rnd4Score: 0,
+    plr5rnd4Score: 0,
+}
+export default function SimpleCounterForm({ player, onSubmit }) {
+    console.log(player);
+    // console.log(players[0]);
+
+    // let [player1, player2, player3, player4, player5] = players;
+
     const handleScoresSubmit = (values, actions) => {
         console.log(values);
         const player1scores = values.plr1rnd1Score + values.plr1rnd2Score + values.plr1rnd3Score + values.plr1rnd4Score;
