@@ -10,7 +10,64 @@ import { useState } from "react";
 import SimpleCounterForm from "../SimpleCounterForm/SimpleCounterForm";
 
 export default function App() {
+  const [players, setPlayers] = useState([
+    {
+      id: "player1",
+      name: "",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
 
+    {
+      id: "player2",
+      name: "",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "player3",
+      name: "",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "player4",
+      name: "",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    },
+    {
+      id: "player5",
+      name: "",
+      roundOne: 0,
+      roundTwo: 0,
+      roundThree: 0,
+      pudding: 0,
+      total: 0
+    }]);
+  
+  const onNamesSubmit = (player1name, player2name, player3name, player4name, player5name) => {
+    setPlayers(([player1, player2, player3, player4, player5]) => {
+      player1.name = player1name;
+      player2.name = player2name;
+      player3.name = player3name;
+      player4.name = player4name;
+      player5.name = player5name;
+    })
+    // console.log(players);
+  }
   const [scores, setScores] = useState({
     mom: 0,
     dad: 0,
@@ -32,12 +89,13 @@ export default function App() {
   }
   return (
     <div className={css.container}>
-      <Header/>
+      <Header />
+      <PlayersNamesForm onNamesSubmit={onNamesSubmit}/>
       <SimpleCounterForm onSubmit={handleGameSummary} />
       <Winner player1={scores.mom} player2={scores.dad} player3={scores.bro} player4={scores.sis} player5={scores.guest} />
     </div>
     
-  )
+)
   
 } 
 
