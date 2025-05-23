@@ -8,7 +8,7 @@ export default function Header({}) {
 
     return (
         <div className={css.container}>
-            <h1 className={css.title}>Welcome to SushiGo Score Counter!</h1>
+            <h1 className={css.title}>Welcome to Sushi Go Score Counter!</h1>
             <p className={css.subtitle}>Track points with ease — round by round!</p>
 
             {/* <p className={css.question}>Please make your choice to continue</p> */}
