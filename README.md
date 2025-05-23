@@ -1,12 +1,12 @@
-# React + Vite
+# Sushi Go Score Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### In progress...
 
-Currently, two official plugins are available:
+Welcome to my personal project, where I am honing my React skills to develop a web application that simplifies score counting for the popular card game Sushi Go by Gamewright. This game, a favorite among my family, requires tracking scores across multiple rounds, traditionally done with pen and paper. In today's tech-savvy world, I thought it would be incredibly convenient to have a digital solution for this task.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+As I continue my coding journey, I am thrilled to implement this project in real-time. Currently, the application features a basic counter to handle score tracking. However, the ultimate goal is to create a user-friendly interface that allows players to easily track and manage scores during gameplay, thereby enhancing the overall experience of playing Sushi Go.
 
-## Expanding the ESLint configuration
+Thank you for joining me on ths exciting jorney. I look forward to sharing more updates and improvements as I progress. Stay tuned for a more refined and user-friendly experience that wil make your Sushi Go game nights even more enjoyable!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Warmly,
+Hanna
